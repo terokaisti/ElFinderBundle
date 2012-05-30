@@ -26,6 +26,7 @@ include_once dirname(__FILE__).'/../../Resources/public/vendor/ElFinder/php/elFi
 include_once dirname(__FILE__).'/../../Resources/public/vendor/ElFinder/php/elFinder.class.php';
 include_once dirname(__FILE__).'/../../Resources/public/vendor/ElFinder/php/elFinderVolumeDriver.class.php';
 include_once dirname(__FILE__).'/../../Resources/public/vendor/ElFinder/php/elFinderVolumeLocalFileSystem.class.php';
+include_once dirname(__FILE__).'/../../Resources/public/vendor/ElFinder/php/elFinderVolumeMySQL.class.php';
 
 /**
  * Instantiates the elFinder connector
