@@ -29,6 +29,7 @@ class PackageInstalledListener
 {
     public function onPackageInstalled(PackageInstalledEvent $event)
     {   
+    	die('xx');
         chdir(__DIR__ . '/../../');
         
         $process = new Process('git submodule init');
