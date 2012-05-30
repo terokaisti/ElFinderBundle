@@ -1,6 +1,33 @@
 # ElFinderBundle
 The ElFinderBundle encapsulates the elFinder file manager to be used in Symfony2. 
 
+## Installation with Composer ##
+Add the following to the composer.json
+
+    {
+        ...
+        "require": {
+        ...
+            "bundles/AlphaLemon/ElFinderBundle": "dev-master"
+        },
+        ...
+        "repositories": [
+            {
+                "type": "package",
+                "package": {
+                    "name": "bundles/AlphaLemon/ElFinderBundle",
+                    "version": "dev-master",
+                    "source": {
+                        "type": "git",
+                        "url": "http://github.com/terokaisti/ElFinderBundle",
+                        "reference": "origin/master"
+                    }
+                }
+            }
+        ]
+    }
+
+
 ## Installation
 Clone this bundle in the vendor/bundles/AlphaLemon directory:
 
@@ -13,16 +40,13 @@ Open the AppKernel configuration file and add the bundle to the registerBundles(
     {
         $bundles = array(
             ...
-            new new AlphaLemon\ElFinderBundle\AlphaLemonElFinderBundle(),
+            new AlphaLemon\ElFinderBundle\AlphaLemonElFinderBundle(),
         )
     }
 
 Register the ElFinderBundle namespaces in `app/autoload.php`:
 
-    $loader->registerNamespaces(array(
-        ...
-        'AlphaLemon'                     => __DIR__.'/../vendor/bundles',
-    ));
+    $loader->add('AlphaLemon\ElFinderBundle', __DIR__.'/../vendor/bundles');
 
 Import the routing configuration into the routing.yml file:
 

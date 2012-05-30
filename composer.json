@@ -21,10 +21,13 @@
         "sensio/generator-bundle":        "2.0.*",
         "sensio/framework-extra-bundle":  "2.0.*",
         "sensio/distribution-bundle":     "2.0.*",
-        "jms/security-extra-bundle":      "1.1.0"
+        "jms/security-extra-bundle":      "1.1.0",
     },
     "autoload": {
         "psr-0": { "AlphaLemon\\ElFinderBundle": "" }
     },
-    "target-dir" : "AlphaLemon/ElFinderBundle"
+    "target-dir" : "AlphaLemon/ElFinderBundle",
+    "post-update-cmd": [
+        "AlphaLemon\\ElFinderBundle\\Composer\\ScriptHandler::installElFinderLibrary"
+    ]
 }
