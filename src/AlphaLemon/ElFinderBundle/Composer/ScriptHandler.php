@@ -10,7 +10,7 @@ class ScriptHandler
     public static function installElFinderLibrary($event)
     {
        	chdir(__DIR__ . '/../../../../');
-
+var_dump(getcwd());die();
        	$process = new Process('git submodule init');
         $process->run();
         
