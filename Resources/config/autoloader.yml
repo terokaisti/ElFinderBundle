@@ -2,6 +2,6 @@ ElFinder:
   namespace:
     0:
       alias: ElFinderCore
-      path: /../vendor/bundles/AlphaLemon/ElFinderBundle/src
+      path: /../vendor/terokaisti/ElFinderBundle/src
   bundle: 
     class: AlphaLemon\ElFinderBundle\AlphaLemonElFinderBundle
