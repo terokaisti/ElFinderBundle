@@ -9,12 +9,14 @@ class ScriptHandler
 {
     public static function installElFinderLibrary($event)
     {
-       	chdir(__DIR__ . '/../../../../');
+		$currentDir = getcwd(); 
 
+		chdir(__DIR__ . '/../../../../');
        	$process = new Process('git submodule init');
         $process->run();
-        
         $process = new Process('git submodule update');
         $process->run();
+        
+        chdir($currentDir);
     }
 }
